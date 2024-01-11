@@ -1,4 +1,18 @@
+
+import { db } from "@/db";
+
 const SnippetCreatePage = () => {
+
+  async function createSnippet() {
+    // this needs to be a server action!
+
+    // check the user's inputs and make sure they're valid
+
+    // create a new record in the database
+
+    // Redirect the user back to the root route
+  }
+
   return (
     <form>
       <h3 className="font-bold m-3">Create a Snippet</h3>
