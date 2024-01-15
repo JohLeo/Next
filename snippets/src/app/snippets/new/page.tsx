@@ -1,8 +1,7 @@
 import { redirect } from 'next/navigation';
 import { db } from "@/db";
 
-const SnippetCreatePage = () => {
-
+export default function SnippetCreatePage() {
   async function createSnippet(formData: FormData) {
     // this needs to be a server action! (solution specifically used by next)
     'use server';
@@ -15,10 +14,9 @@ const SnippetCreatePage = () => {
     const snippet = await db.snippet.create({
       data: {
         title,
-        code
+        code,
       },
     });
-    console.log(snippet);
 
     // Redirect the user back to the root route
     redirect('/');
@@ -57,5 +55,3 @@ const SnippetCreatePage = () => {
     </form>
   );
 };
-
-export default SnippetCreatePage;

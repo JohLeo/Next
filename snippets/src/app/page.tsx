@@ -13,7 +13,7 @@ export default async function Home() {
         <div> {snippet.title} </div>
         <div> View </div>
       </Link>
-    )
+    );
   });
 
   return (
