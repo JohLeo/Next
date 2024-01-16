@@ -42,12 +42,13 @@ export async function createSnippet(
   }
 
   // create a new record in the database
-  const snippet = await db.snippet.create({
-    data: {
-      title,
-      code,
-    },
-  });
+  // const snippet = await db.snippet.create({
+  //   data: {
+  //     title,
+  //     code,
+  //   },
+  // });
+  throw new Error('Duude thats an oops!!!');
 
   // Redirect the user back to the root route
   redirect('/');
