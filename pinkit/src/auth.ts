@@ -10,7 +10,8 @@ if (!GITHUB_CLIENT_ID || !GITHUB_CLIENT_SECRET) {
   throw new Error('Missing GitHub Oauth credentials');
 }
 
-export const { handlers: { GET, POST },
+export const {
+  handlers: { GET, POST },
   auth,
   signOut,
   signIn,
@@ -19,7 +20,7 @@ export const { handlers: { GET, POST },
   providers: [
     Github({
       clientId: GITHUB_CLIENT_ID,
-      clientSecret: GITHUB_CLIENT_SECRET
+      clientSecret: GITHUB_CLIENT_SECRET,
     }),
   ],
   callbacks: {
