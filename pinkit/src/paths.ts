@@ -3,7 +3,7 @@ const paths = {
   home() {
     return '/';
   },
-  topicsShow(topicSlug: string) {
+  topicShow(topicSlug: string) {
     return `/topics/${topicSlug}`;
   },
   postCreate(topicSlug: string) {
@@ -13,3 +13,5 @@ const paths = {
     return `/topics/${topicSlug}/posts/${postId}`;
   },
 };
+
+export default paths;
