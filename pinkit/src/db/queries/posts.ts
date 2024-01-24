@@ -1,14 +1,14 @@
 import type { Post } from '@prisma/client';
 import { db } from '@/db';
 
-export type PostWithData = Post & {
+export type PostWithDetails = Post & {
   topic: { slug: string };
   user: { name: string | null };
   _count: { comments: number }
-}
+};
 
 
-export function fetchPostsByTopicSlug(slug: string): Promise<PostWithData[]> {
+export function fetchPostsByTopicSlug(slug: string): Promise<PostWithDetails[]> {
   return db.post.findMany({
     where: { topic: { slug } },
     include: {
