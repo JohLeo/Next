@@ -1,3 +1,4 @@
+import PostCreateForm from '@/components/posts/post-create-form';
 
 interface TopicShowPageProps {
   params: {
@@ -15,7 +16,7 @@ export default function TopicShowPage({ params }: TopicShowPageProps) {
       </h1>
     </div>
     <div>
-
+      <PostCreateForm />
     </div>
   </div>;
 };
