@@ -24,7 +24,7 @@ export function fetchTopPosts(): Promise<PostWithDetails[] {
     orderBy: [
       {
         comments: {
-          _count: "desc"
+          _count: 'desc',
         }
       }
     ],
