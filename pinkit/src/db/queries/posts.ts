@@ -19,7 +19,7 @@ export function fetchPostsByTopicSlug(slug: string): Promise<PostWithDetails[]> 
   });
 }
 
-export function fetchTopPosts(): Promise<PostWithDetails[] {
+export function fetchTopPosts(): Promise<PostWithDetails[]> {
   return db.post.findMany({
     orderBy: [
       {
